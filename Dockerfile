@@ -25,6 +25,7 @@ RUN chmod 777 $(pwd)
 RUN composer install
 RUN chmod -R 777 storage
 RUN chmod -R 775 storage
+RUN chmod -R 775 bootstrap
 RUN php artisan config:cache
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
